@@ -114,9 +114,88 @@
 						</ul>
 					</section>
 					<section>
-						<h3>Exemple simple</h3>
+						<h3>Exemple classique d'appel (négociation)</h3>
 						<img src="./assets/svg/simple_invite.svg" width="90%" height="80%"/>
 					</section>
+					<section>
+						<h2>Les éléments d'un réseau SIP</h2>
+						<ul>
+							<li>User agent</li>
+							<li>Registrar (optionnel)</li>
+							<li>Proxy (optionnel)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Exemples de topologies</h2>
+						<ul>
+							<li>P2P : User agent à user agent</li>
+							<li>Registrar + Proxy ouvert <i>ex : sip2sip.info</i></li>
+							<li>Gateway vers le réseau PSTN <i>ex : freephonie</i></li>
+							<li>SIP trunking <i>ex : pbxes.org</i></li>
+							<li>Avoir son propre server / celui de l'entreprise</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-subtitle="Begins">
+					<section>
+						<h2>La génèse</h2>
+						<ul>
+							<li>Besoin d'un client SIP qui marche.</li>
+							<li>Équipe de Sipdroid ne réagissant pas à mes patchs...</li>
+							<li>Envie de développer sur son nouveau HTC G2</li>
+						</ul>
+						<br/><br/>
+						<p>&#8594; C'est l'heure de coder un peu</p>
+					</section>
+					<section>
+						<ul>
+							<li>Une stack SIP opensource en natif : <b>PJSIP</b>
+								<ul>
+									<li>Bien codée & documentée</li>
+									<li>"Juste" à implémenter la glue driver audio pour android</li>
+								</ul>
+							</li>
+							<li>Une couche d'auto-génération avec SWIG toute prête</li>
+						</ul>
+						<br/><br/>
+						<p>&#8594; Très vite une première appli qui fonctionne avec un bouton décrocher/raccrocher</p>
+						<p>Puis après quelques temps à jouer avec, release sous license GPL du projet.</p>
+					</section>
+				</section>
+
+				<section data-subtitle="Aujourd'hui">
+					<section>
+						<img class="unformatted-img" src="./assets/svg/ic_launcher_nightly.svg" 
+							style="float:left;margin-top:30px;"
+							width="300" height="300"/>
+						<ul>
+							<li>Libre</li>
+							<li>13 codecs audio</li>
+							<li>Régles de filtres/Ré-écriture</li>
+							<li>Plein d'assistants de configuration</li>
+							<li>Comptes multiples</li>
+							<li>Support du SIP messages</li>
+							<li>Plus de 130 000 installations actives</li>
+						</ul>
+					</section>
+					<section>
+						<p>Un channel de nightly build avec mise à jour auto</p>
+						<p><a href="http://nightlies.csipsimple.com/trunk">http://nightlies.csipsimple.com/trunk</a></p>
+						<p>
+						<ul>
+							<li>Qui supporte mieux 4.0 et les tablettes</li>
+							<li>Le SIP sécurisé : TLS, ZRTP, SRTP de base</li>
+							<li>Début de support vidéo</li>
+							<li>Partage de présence SIP</li>
+						</ul>
+						</p>
+					</section>
+					<section>
+						<img src="./assets/images/device-2012-05-20-193627.png" style="display:inline-block;height:550px;"/>
+						<img src="./assets/images/device-2012-05-20-193657.png" style="display:inline-block;height:-moz-calc(100% / 10);"/>
+					</section>
+					
 				</section>
 
 				<section>
@@ -290,7 +369,7 @@ linkify( 'a' );
 			Reveal.addEventListener( 'slidechanged', function( event ) {
 				// event.indexh & event.indexv
 				var sn = document.querySelector( '#reveal .actionbar .label > .subtitle');
-				var pNode = document.querySelector("#reveal .slides section.present");
+				var pNode = document.querySelector("#reveal .slides > section.present");
 				sn.innerHTML = pNode.getAttribute('data-subtitle');
 			} );
 

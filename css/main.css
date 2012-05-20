@@ -248,7 +248,14 @@ html {
 	     -o-transition: all .2s linear;
 	        transition: all .2s linear;
 }
-
+#reveal section img.unformatted-img {
+	margin: 0;
+	background : transparent;
+	border : 0px;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+}
 	#reveal a:hover img {
 		background: rgba(255,255,255,0.2);
 		border-color: #13DAEC;

@@ -1,0 +1,327 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSipSimple</title>
+
+		<meta name="description" content="An opensource SIP application and library">
+		<meta name="author" content="Régis Montoya">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href="./assets/svg/ic_launcher_phone.svg" rel="icon" type="image/svg+xml">
+		
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Roboto' rel='stylesheet' type='text/css'>
+		<style>
+			@font-face {
+			  font-family: 'Roboto';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Roboto Regular'), local('Roboto-Regular')/*, url('http://themes.googleusercontent.com/font?kit=2UX7WLTfW3W8TclTUvlFyQ') format('woff')*/;
+			}
+@font-face {
+			  font-family: 'Roboto Bold';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Roboto Bold'), local('Roboto-Bold')/*, url('http://themes.googleusercontent.com/font?kit=2UX7WLTfW3W8TclTUvlFyQ') format('woff')*/;
+			}
+			@font-face {
+			  font-family: 'Droid Sans';
+			  font-style: normal;
+			  font-weight: normal;
+			  src: local('Droid Sans'), local('DroidSans')/*, url('http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff') format('woff')*/;
+			}
+
+		</style>		
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<div class="actionbar">
+				<img class="icon" src="./assets/svg/ic_launcher_phone.svg"/>
+				<span class="label">
+					<div class="title">CSipSimple</div>
+					<div class="subtitle">A SIP Application</div>
+				</span>
+
+				<!-- The navigational controls UI -->
+				<aside class="controls">
+					<a class="right" href="#"><img src="./assets/images/1-navigation-next-item.png" /></a>
+					<a class="left" href="#"><img src="./assets/images/1-navigation-previous-item.png" /></a>
+					<a class="up" href="#"><img src="./assets/images/1-navigation-collapse.png" /></a>
+					<a class="down" href="#"><img src="./assets/images/1-navigation-expand.png" /></a>
+				</aside>
+			</div>
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-subtitle="Mais c'est quand même compliqué">
+					<h1>CSipSimple</h1>
+					<h3 class="inverted">Une application SIP opensource pour Android</h3>
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+				<section data-subtitle="About me">
+					<h2>Qui suis-je?</h2>
+					<p>
+						<ul>
+							<li>Expert javascript/html5/css3</li>
+							<li>Fan de python / django</li>
+							<li>Ayant touché plein de languages : C, C++, Java, Perl, Flex, php, XUL...</li>
+							<li>Et utilisateur Linux</li>
+						</ul>
+					</p>
+					<p>
+						<i><small><a href="http://www.r3gis.fr">Régis Montoya</a> / <a href="http://twitter.com/r3gis3R">@r3gis3R</a></small></i>
+					</p>
+				</section>
+				
+				<section data-subtitle="Protocole SIP">
+					<section>
+						<h2>Le SIP</h2>
+						<p>
+							SIP pour Session Initiation Protocol.
+						</p>
+						<ul>
+							<li>Protocole <b>standard et ouvert</b> normalisé par l'IETF</li>
+							<li>VoIP mais aussi : IM, Video, Réalité virtuelle, jeux vidéo...</li>
+							<li>En France
+								<ul>
+									<li>2 ISP : Free et SFR fournissent un compte SIP.</li>
+									<li>Il y a aussi des offres via Ippi et Keyyo Mobile.</li>
+								</ul>
+							</li>
+							<li>Des providers internationaux.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Exemple simple</h3>
+						<img src="./assets/svg/simple_invite.svg" width="90%" height="80%"/>
+					</section>
+				</section>
+
+				<section>
+					<img src="./assets/images/use_the_source_luke.png" style="background-color:transparent; border:0px;box-shadow:0 0 0px;"/>
+				</section>
+
+				<section>
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like:
+					</p>
+					<ul>
+						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
+						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
+						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
+						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Marvelous Unordered List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<section data-state="alert">
+						<h2>Global State</h2>
+						<p>
+							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+							will be added as a class to the document element when the slide is open. This let's you
+							apply broader style changes, like switching the background.
+						</p>
+						<a href="#/7/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						</a>
+					</section>
+					<section data-state="blackout">
+						<h2>"blackout"</h2>
+						<a href="#/7/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
+						</a>
+					</section>
+					<section data-state="soothe">
+						<h2>"soothe"</h2>
+						<a href="#/7/0" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section data-state="customevent">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
+	alert( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+					</blockquote>
+				</section>
+				
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code contenteditable>
+var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
+				document.body.style['MozPerspective'] !== undefined ||
+				document.body.style['perspective'] !== undefined;
+
+function linkify( selector ) {
+    if( supports3DTransforms ) {
+        
+        var nodes = document.querySelectorAll( selector );
+
+        for( var i = 0, len = nodes.length; i < len; i++ ) {
+            var node = nodes[i];
+
+            if( !node.className || !node.className.match( /roll/g ) ) {
+                node.className += ' roll';
+                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+            }
+        };
+    }
+}
+
+linkify( 'a' );
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+				
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,<br/>
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Fragmented Views</h2>
+					<p>Hit the next arrow...</p>
+					<p class="fragment">... to step through ...</p>
+					<ol>
+						<li class="fragment"><code>any type</code></li>
+						<li class="fragment"><em>of view</em></li>
+						<li class="fragment"><strong>fragments</strong></li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
+						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
+					</a>
+				</section>
+				
+				
+				<section>
+					<h1>That's all folks</h1>
+					<h3 class="inverted">BY Régis Montoya / www.r3gis.fr</h3>
+				</section>
+			</div>
+
+
+		</div>
+		
+		<script src="js/reveal.js"></script>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				//alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+				var sn = document.querySelector( '#reveal .actionbar .label > .subtitle');
+				var pNode = document.querySelector("#reveal .slides section.present");
+				sn.innerHTML = pNode.getAttribute('data-subtitle');
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'concave' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

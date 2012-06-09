@@ -14,7 +14,6 @@
 
 		<link href="./assets/svg/ic_launcher_phone.svg" rel="icon" type="image/svg+xml">
 		
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Roboto' rel='stylesheet' type='text/css'>
 		<style>
 			@font-face {
 			  font-family: 'Roboto';
@@ -141,22 +140,22 @@
 					<section>
 						<h2>La génèse</h2>
 						<ul>
-							<li>Besoin d'un client SIP qui marche.</li>
-							<li>Équipe de Sipdroid ne réagissant pas à mes patchs...</li>
-							<li>Envie de développer sur son nouveau HTC G2</li>
+						<li>Besoin d'un client SIP qui marche.</li>
+						<li>Équipe de Sipdroid ne réagissant pas à mes patchs...</li>
+						<li>Envie de développer sur son nouveau HTC G2</li>
 						</ul>
 						<br/><br/>
 						<p>&#8594; C'est l'heure de coder un peu</p>
 					</section>
 					<section>
 						<ul>
-							<li>Une stack SIP opensource en natif : <b>PJSIP</b>
-								<ul>
-									<li>Bien codée & documentée</li>
-									<li>"Juste" à implémenter la glue driver audio pour android</li>
-								</ul>
-							</li>
-							<li>Une couche d'auto-génération avec SWIG toute prête</li>
+						<li>Une stack SIP opensource en natif : <b>PJSIP</b>
+						<ul>
+						<li>Bien codée & documentée</li>
+						<li>"Juste" à implémenter la glue driver audio pour android</li>
+						</ul>
+						</li>
+						<li>Une couche d'auto-génération avec SWIG toute prête</li>
 						</ul>
 						<br/><br/>
 						<p>&#8594; Très vite une première appli qui fonctionne avec un bouton décrocher/raccrocher</p>
@@ -166,181 +165,198 @@
 
 				<section data-subtitle="Aujourd'hui">
 					<section>
+						<p></p>
 						<img class="unformatted-img" src="./assets/svg/ic_launcher_nightly.svg" 
 							style="float:left;margin-top:30px;"
 							width="300" height="300"/>
 						<ul>
-							<li>Libre</li>
-							<li>13 codecs audio</li>
-							<li>Régles de filtres/Ré-écriture</li>
-							<li>Plein d'assistants de configuration</li>
-							<li>Comptes multiples</li>
-							<li>Support du SIP messages</li>
-							<li>Plus de 130 000 installations actives</li>
+						<li>Libre</li>
+						<li>13 codecs audio</li>
+						<li>Régles de filtres/Ré-écriture</li>
+						<li>Plein d'assistants de configuration</li>
+						<li>Comptes multiples</li>
+						<li>Support du SIP messages</li>
+						<li>Plus de 130 000 installations actives</li>
 						</ul>
 					</section>
 					<section>
+						<p></p>
 						<p>Un channel de nightly build avec mise à jour auto</p>
 						<p><a href="http://nightlies.csipsimple.com/trunk">http://nightlies.csipsimple.com/trunk</a></p>
 						<p>
 						<ul>
-							<li>Qui supporte mieux 4.0 et les tablettes</li>
-							<li>Le SIP sécurisé : TLS, ZRTP, SRTP de base</li>
-							<li>Début de support vidéo</li>
-							<li>Partage de présence SIP</li>
+						<li>Qui supporte Android 4.0 et les tablettes</li>
+						<li>Le SIP sécurisé : TLS, ZRTP, SRTP de base</li>
+						<li>Début de support vidéo</li>
+						<li>Partage de présence SIP</li>
 						</ul>
 						</p>
 					</section>
 					<section>
-						<img src="./assets/images/device-2012-05-20-193627.png" style="display:inline-block;height:550px;"/>
-						<img src="./assets/images/device-2012-05-20-193657.png" style="display:inline-block;height:-moz-calc(100% / 10);"/>
+						<div class="img-shower">
+						<p class="img-show" style="background-image:url(./assets/images/device-2012-05-20-193627.png);"></p>
+						<p class="img-show" style="background-image:url(./assets/images/device-2012-05-20-193657.png);"></p>
+						<p class="img-show" style="background-image:url(./assets/images/device-2012-05-20-193724.png);"></p>
+						<p class="img-show" style="background-image:url(./assets/images/device-2012-05-20-194115.png);"></p>
+						</div>
 					</section>
 					
 				</section>
 
-				<section>
-					<img src="./assets/images/use_the_source_luke.png" style="background-color:transparent; border:0px;box-shadow:0 0 0px;"/>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+				<section data-subtitle="A la source">
+					<section>
+						<h2>La partie java</h2>
+						<ul>
+						<li>Action Bar Sherlock (modifié pour compat 1.6)</li>
+						<li>Un service pour le contrôle de la stack SIP</li>
+						<li>Une API pour permettre configurer (ContentProvider)</li>
+						<li>Une API pour contrôler la stack SIP (Service binding)</li>
+						<li>Une UI qui se repose sur le service via l'API</li>
+						</ul>
+					</section>
+					<section>
+						<h2>La partie C</h2>
+						<ul>
+						<li>pjsip pour la stack SIP</li>
+						<li>Les codecs g726, g729, silk, opus</li>
+						<li>ZRTP</li>
+						<li>WebRTC, libYUV</li>
+						<li>OpenSSL (ou presque), ZRTP</li>
+						<li>Ffmpeg, x264</li>
+						<li>Des toolchains pour chacun :)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>La glue entre les deux</h2>
+						<ul>
+						<li>Utilisation de SWIG</li>
+						<li>Scripts python pour rendre la génération SWIG compatible avec la JVM Dalvik</li>
+						<li>Classe de callback depuis le C vers le java</li>
+						</ul>
+					</section>
 				</section>
 				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
+				<section data-subtitle="Native or not native">
+					<section>
+						<h2>Quand utiliser le NDK</h2>
+						<ul>
+						<li>Quand on a une lib stable en C  / C++</li>
+						<li>Une connaissance des toolchains GNU</li>
+						<li>Pour certaines optimisations</li>
+						</ul>
 					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
+					<section>
+						<h2>Comment utiliser le NDK</h2>
+						<ul>
+						<li>Sous linux c'est plus simple</li>
+						<li>En utilisant la toolchain du NDK</li>
+						<li>Si existante, en utilisant GNU configure de la lib, CC, sysroot etc... bref de la cross compilation</li>
+						<li>Au dessus :
+						<ul>
+						<li>Des bindings JNI fait main</li>
+						<li>Autogénéré : SWIG</li>
+						</ul>
+						</li>
+						<li>Pour les accès aux api android, utiliser JNI dans l'autre sens mais attentions aux threads !</li>
+						</ul>
 					</section>
 				</section>
+				<section data-subtitle="Défragmentation">
+					<section>
+						<h2>Le faux problème de la fragmentation</h2>
+						<p>La fragmentation des versions d'Android n'est <b>pas</b> un vrai problème depuis la 1.6</p>
+						<ul>
+						<li>Librairie de compatibilité, Action Bar Sherlock</li>
+						<li>Vraiment comprendre minSdk, targetSdk</li>
+						<li>Lint</li>
+						<li>Reflexion</li>
+						<li>Singleton / interface</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Singleton / interface</h2>
+						
+						<pre><code contenteditable>
+public abstract class KeyguardWrapper {
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	alert( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
-				document.body.style['MozPerspective'] !== undefined ||
-				document.body.style['perspective'] !== undefined;
-
-function linkify( selector ) {
-    if( supports3DTransforms ) {
-        
-        var nodes = document.querySelectorAll( selector );
-
-        for( var i = 0, len = nodes.length; i < len; i++ ) {
-            var node = nodes[i];
-
-            if( !node.className || !node.className.match( /roll/g ) ) {
-                node.className += ' roll';
-                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
-            }
-        };
+    public static KeyguardWrapper getKeyguardManager(Activity activity) {
+        KeyguardWrapper kw;
+        if(Compatibility.isCompatible(5)) {
+            kw = new Keyguard5();
+        } else {
+            kw = new Keyguard3();
+        }
+        kw.initActivity(activity);
+        return kw;
     }
+    
+    public abstract void initActivity(Activity activity);
+    public abstract void lock();
+    public abstract void unlock();
 }
 
-linkify( 'a' );
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
+						</code></pre>
+						<div>Comme ça pas de problème de dalvik en 1.6</div>
+					</section>
+					<section>
+						<h2>Le vrai problème de fragmentation</h2>
+						<p>Les drivers propriétaires...</p>
+						<p>Samsung ré-interprète l'API audio à peu près à chaque device.</p>
+						<p>Pas toujours très consistant non plus chez les autres.</p>
+					</section>
 				</section>
 
-				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
+				<section data-subtitle="Dé-coder">
+					<section data-state="blackout">
+						<h2>Conseil...</h2>
+						<img src="./assets/images/use_the_source_luke.png" width="90%" height="80%" style="background:transparent;border:0px;"/>
+					</section>
+					<section>
+						<h2>Use the source</h2>
+						<ul>
+						<li>Checkout</li>
+						<li>Lire online par exemple sur github</li>
+						<li><a href="https://github.com/android/platform_frameworks_base/">https://github.com/android/platform_frameworks_base/</a></li>
+						<li>Les applications de base</li>
+						<li>La lib de compatibilité</li>
+						</ul>
+					</section>
 				</section>
-				
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
+
+				<section data-subtitle="Attention sol glissant">
+					<h2>Des erreurs à ne pas faire</h2>
+					<ul>
+					<li>Fuite de powerLock 
+						<pre><code>adb shell dumpsys power</code></pre>
+					</li>
+					<li>Fuite de permissions</li>
+					<li>Fuite de cursor</li>
+					</ul>
 				</section>
-				
+
+				<section data-subtitle="Be Droid">
+					<h2>L'esprit d'Android</h2>
+					<ul>
+					<li>Une application, un but</li>
+					<li>Penser plugin / API</li>
+					<li>Les applications sont faites pour parler ensemble</li>
+					</ul>
+				</section>
+
+				<section data-subtitle="La boite à outils">
+					<h2>Des outils</h2>
+					<ul>
+					<li>Traductions : <a href="https://www.transifex.net/">Transifex</a> <br/>
+						Gratuit, ouvert, basé sur Django
+					</li>
+					<li>Génération d'icône à partir de SVG : <a href="https://github.com/r3gis3r/svg2drawable">SVG2Drawable</a> <br/>
+						Scripts python + UI pour faire des png à partir de resources SVG</li>
+					</ul>
+				</section>
 				
 				<section>
 					<h1>That's all folks</h1>
-					<h3 class="inverted">BY Régis Montoya / www.r3gis.fr</h3>
+					<h3 class="inverted">By Régis Montoya / www.r3gis.fr</h3>
 				</section>
 			</div>
 
